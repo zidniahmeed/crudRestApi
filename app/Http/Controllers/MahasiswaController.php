@@ -32,7 +32,7 @@ class MahasiswaController extends Controller
             ]);
             $data = Mahasiswa::where('id','=',$mahasiswa->id)->get();
             if ($data) {
-                return ApiFormatter::createApi(200, 'success', $data);
+                return ApiFormatter::createApi(200, 'success ', $data);
             }else{
                 return ApiFormatter::createApi(400,'failed');
             }
